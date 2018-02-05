@@ -1,0 +1,4 @@
+key: gallery.use_richtext
+xtype: combo-boolean
+namespace: gallery
+area: TinyMCE

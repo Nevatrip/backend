@@ -1,0 +1,16 @@
+id: 37
+source: 1
+name: tpl_Gallery_thumb_carousel
+description: ''
+category: Gallery
+properties: 'a:0:{}'
+
+-----
+
+<div class="item [[+idx:is=`1`:then=`active`:else=``]]">
+    <img src="[[+thumbnail]]" alt="[[+name:esc]]" class="img-responsive">
+    <div class="carousel-caption">
+        <h3>[[+name]]</h3>
+        <p>[[+description]]</p>
+    </div>
+</div>

@@ -1,0 +1,37 @@
+id: 6
+source: 1
+name: ГлавноеПревьюЭкскурсии
+description: ''
+category: 'Контентные блоки'
+properties: 'a:0:{}'
+
+-----
+
+<div class="jumbotron img-bg" style="background-image: url('/assets/img/e/[[#[[#[[+id]].parent]].alias]]/[[#[[+id]].alias]]_bg.jpg');">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-9 col-sm-offset-3">
+                <div class="alpha-bg">
+                    <a href="/[[~[[+id]]]]" class="h2"><h2 style="font-size:35px;">[[#[[+id]].pagetitle]]</h2></a>
+                    
+                    <ul class="list-unstyled">
+                        [[#[[+id]].tv.e_points:modPoints=`tpl_КрутойПункт`]]
+                    </ul>
+                    
+                    <div class="pull-left">
+                        <span class="price">[[#[[+id]].tv.e_price]] <i class="fa fa-rub fa-xs"></i></span>
+                        &nbsp;
+                        &nbsp;
+                        <a href="[[~18?scheme=`https`]]?id=[[+id]]" class="btn btn-warning btn-lg">Купить</a>
+                    
+                        [[#[[+id]].tv.e_price_on_pier:notempty=`<p><small class="sub-price">[[#[[+id]].tv.e_price_on_pier]] <i class="fa fa-rub fa-xs"></i> на причале</small></p>`]]
+                    </div>
+                    
+                    <p style="float:left;margin-left: 20px;margin-top:10px;">
+                        <a href="/[[~[[+id]]]]">Подробнее об экскурсии &rarr;</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+id: 9
+source: 1
+type: text
+name: e_from
+caption: 'Причал отправления:'
+description: 'в формате "[Название причала](ссылка)", например "[Адмиралтейская наб. 2 (спуск со львами)](https://maps.yandex.ru/-/CVGKJVkQ)"'
+category: '1. Разное'
+elements: ''
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:3:{s:10:"allowBlank";s:4:"true";s:9:"maxLength";s:0:"";s:9:"minLength";s:0:"";}'
+output_properties: 'a:0:{}'
+content: ''

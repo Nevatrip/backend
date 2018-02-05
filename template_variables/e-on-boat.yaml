@@ -1,0 +1,13 @@
+id: 7
+source: 1
+type: listbox-multiple
+name: e_on_boat
+caption: 'На борту:'
+category: '5. Теплоход'
+elements: туалет==male||бар==glass||еда==cutlery||экскурсия==comment||музыка==music
+display: delim
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:7:{s:10:"allowBlank";s:4:"true";s:9:"listWidth";s:0:"";s:5:"title";s:0:"";s:9:"typeAhead";s:5:"false";s:14:"typeAheadDelay";s:3:"250";s:13:"listEmptyText";s:0:"";s:10:"stackItems";s:5:"false";}'
+output_properties: 'a:1:{s:9:"delimiter";s:2:"\n";}'
+content: ''

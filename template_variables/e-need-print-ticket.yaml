@@ -1,0 +1,13 @@
+id: 32
+source: 1
+type: option
+name: e_need_print_ticket
+caption: 'Нужно клиенту распечатать билет?'
+category: '3. Покупка билетов'
+elements: Да==1||Нет==0
+display: default
+default_text: '0'
+properties: 'a:0:{}'
+input_properties: 'a:2:{s:10:"allowBlank";s:4:"true";s:7:"columns";s:1:"1";}'
+output_properties: 'a:0:{}'
+content: '0'

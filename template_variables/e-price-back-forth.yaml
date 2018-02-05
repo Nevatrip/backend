@@ -1,0 +1,14 @@
+id: 33
+source: 1
+type: text
+name: e_price_back_forth
+caption: 'Цены за билеты туда-обратно (в руб.)'
+description: 'В формате "взрослый,льготный,детский". Например, 1200,400,0 или 1200,-,200.'
+category: '2. Стоимость'
+elements: ''
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:3:{s:10:"allowBlank";s:4:"true";s:9:"maxLength";s:0:"";s:9:"minLength";s:0:"";}'
+output_properties: 'a:0:{}'
+content: ''

@@ -1,0 +1,4 @@
+key: gallery.tiny.width
+value: 95%
+namespace: gallery
+area: TinyMCE

@@ -1,0 +1,21 @@
+id: 7
+source: 1
+name: tpl_НаБорту
+description: ''
+category: modPoints
+properties: 'a:0:{}'
+
+-----
+
+<span class="fa-stack" title="[[%e_on_boat_[[+title]]]]" style="margin-left: 0;">
+  <i class="fa fa-square fa-stack-2x text-warning"></i>
+  [[+title:isnot=`comment`:and:isnot=`male`:then=`
+  <i class="fa fa-[[+title]] fa-stack-1x"></i>
+  `]]
+  [[+title:is=`comment`:then=`
+  <i class="fa icon-microphone fa-stack-1x"></i>
+  `]]
+  [[+title:is=`male`:then=`
+  <i class="fa icon-wc fa-stack-1x"></i>
+  `]]
+</span>

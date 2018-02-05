@@ -1,0 +1,109 @@
+id: 8
+source: 1
+templatename: 'Список заказов'
+description: ''
+properties: 'a:0:{}'
+
+-----
+
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/LocalBusiness">
+<head lang="ru">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>[[*longtitle:default=`[[*pagetitle]]`]]</title>
+    <meta name="description" content="[[*description]]"/>
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="brand" content="[[*pagetitle]]"/>
+    <meta itemprop="url" content="http://nevatrip.ru"/>
+    <meta itemprop="image" content="http://nevatrip.ru/assets/img/nevatrip_logo_social.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="[[*pagetitle]]"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://nevatrip.ru/"/>
+    <meta property="og:image" content="http://nevatrip.ru/assets/img/nevatrip_logo_social.png"/>
+    <meta property="og:description" content="[[*description]]"/>
+
+    <meta name="theme-color" content="#3799c9">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png"/>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-datepicker3.css"/>
+</head>
+<body>
+<div class="topbar" id="TopBar">
+    <div class="container">
+        <div class="topbar-brand">
+            <a href="[[~1]]">
+                <img src="/assets/img/nevatrip_logo_sm.png" alt="Nevatrip" itemprop="logo" class="visible-xs">
+                <img src="/assets/img/nevatrip_logo_md.png" alt="Nevatrip" itemprop="logo" class="hidden-xs">
+            </a>
+        </div>
+        <div class="topbar-slogan hidden-xs">Лучшие водные экскурсии по Петербургу</div>
+        <div class="topbar-text text-right">
+            <a href="mailto:info@nevatrip.ru" target="_blank">info@nevatrip.ru</a>
+
+            <p class="lead"><a href="tel:88129653404">8 812 965-34-04</a></p>
+        </div>
+    </div>
+</div>
+<div class="navbar navbar-inverse">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Меню</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav nav-justified">
+                <li><a href="[[~1?scheme=`http`]]#day"><span class="lead">Дневные экскурсии</span><span class="hidden-xs"><br/>по рекам и каналам Петербурга</span></a>
+                </li>
+                <li><a href="[[~1?scheme=`http`]]#night"><span class="lead">Ночные прогулки</span><span class="hidden-xs"><br/>под развод мостов</span></a>
+                </li>
+                <li><a href="[[~1?scheme=`http`]]#meteors"><span class="lead">Метеор</span><span class="hidden-xs"><br/>в Петергоф, Кронштадт</span></a>
+                </li>
+                <li><a href="[[~1?scheme=`http`]]#arenda"><span class="lead">Аренда теплохода</span><span class="hidden-xs"><br/>на свадьбу, корпоратив</span></a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="divider"></div>
+<div class="container-fluid">
+    <h1>[[*pagetitle]]</h1>
+    [[*content]]
+</div>
+
+[[$footer?]]
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="/assets/js/modernizr.custom.94854.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="/assets/js/bootstrap-datepicker.js"></script>
+<script src="/assets/locales/bootstrap-datepicker.ru.min.js"></script>
+<script src="/assets/js/app.js"></script>
+<script>
+    Modernizr.load([
+        {
+          test: Modernizr.dataset,
+          nope: '/assets/js/html5-dataset.js'
+        },
+        {
+          test: Modernizr.placeholder,
+          nope: '/assets/js/placeholders.min.js'
+        },
+        '/assets/js/form.js'
+    ]);
+</script>
+
+[[$Счетчики]]
+
+</body>
+</html>

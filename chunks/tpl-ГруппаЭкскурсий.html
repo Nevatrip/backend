@@ -1,0 +1,21 @@
+id: 1
+source: 1
+name: tpl_ГруппаЭкскурсий
+description: ''
+category: 'Контентные шаблоны'
+properties: 'a:0:{}'
+
+-----
+
+<div id="[[+alias]]">
+    <div class="divider"></div>
+        <div class="img-bg" style="background-image: url('/assets/img/e/[[+alias]]/bg.jpg');">
+            <div class="container">
+                <a href="[[~[[+id]]]]"><h2 class="alpha-bg" style="color: #312d2d">[[+pagetitle]]</h2></a>
+            </div>
+        </div>
+        <div class="container">
+        
+        [[getResources? &parents=`[[+id]]` &tpl=`tpl_Экскурсия` &depth=`0` &limit=`0` &includeTVs=`1` &processTVs=`1` &sortby=`{"menuindex":"ASC","id":"ASC"}` ]]
+    </div>
+</div>

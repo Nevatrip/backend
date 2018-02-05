@@ -1,0 +1,13 @@
+id: 16
+source: 1
+type: checkbox
+name: e_excluded_days
+caption: 'Дни, когда НЕТ навигации'
+category: '3. Покупка билетов'
+elements: пн==1||вт==2||ср==3||чт==4||пт==5||сб==6||вс==7
+display: delim
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:2:{s:10:"allowBlank";s:4:"true";s:7:"columns";s:1:"1";}'
+output_properties: 'a:1:{s:9:"delimiter";s:1:",";}'
+content: ''

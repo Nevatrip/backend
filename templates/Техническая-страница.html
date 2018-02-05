@@ -1,0 +1,161 @@
+id: 7
+source: 1
+templatename: 'Техническая страница'
+description: ''
+category: Технические
+properties: 'a:0:{}'
+
+-----
+
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/LocalBusiness">
+<head lang="ru">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <base href="/"/>
+
+    <title>[[*longtitle:default=`[[*pagetitle]]`]]</title>
+    <meta name="description" content="[[*description]]"/>
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="brand" content="[[*pagetitle]]"/>
+    <meta itemprop="url" content="http://nevatrip.ru"/>
+    <meta itemprop="image" content="http://nevatrip.ru/assets/img/nevatrip_logo_social.png">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="[[*pagetitle]]"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="http://nevatrip.ru/"/>
+    <meta property="og:image" content="http://nevatrip.ru/assets/img/nevatrip_logo_social.png"/>
+    <meta property="og:description" content="[[*description]]"/>
+
+    <meta name="theme-color" content="#3799c9">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png"/>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/flag-icon.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-image-gallery.min.css">
+</head>
+<body>
+<div class="topbar" id="TopBar">
+    <div class="container">
+        <div class="topbar-brand">
+            <a href="[[~1]]">
+                <img src="/assets/img/nevatrip_logo_sm.png" alt="Nevatrip" itemprop="logo" class="visible-xs">
+                <img src="/assets/img/nevatrip_logo_md.png" alt="Nevatrip" itemprop="logo" class="hidden-xs">
+            </a>
+        </div>
+        <div class="topbar-slogan hidden-xs">Лучшие водные экскурсии по Петербургу</div>
+        <div class="topbar-text text-right">
+            <a href="mailto:info@nevatrip.ru" target="_blank">info@nevatrip.ru</a>
+
+            <p class="lead"><a href="tel:88129653404">8 812 965-34-04</a></p>
+        </div>
+    </div>
+</div>
+<div class="navbar navbar-inverse" id="NavScrollSpy">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            [[$menu?]]
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron img-bg" style="background-image: url('assets/img/tech/error.jpg');">
+    <p>&nbsp;</p>
+    <div class="container">
+        <div class="alpha-bg">
+            <h1>[[*pagetitle]]</h1>
+        </div>
+    </div>
+    <p>&nbsp;</p>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <p class="lead">Кажется, вы нашли наш секретный раздел…</p>
+            Мы до сих пор не понимаем, как у вас это получилось, но, если честно, тут нет ничего интересного. Не расстраивайтесь, лучше посмотрите, какие классные экскурсии мы для вас подобрали:
+            [[!pdoResources?
+              &tpl=`tpl_random_1-2`
+              &fastMode=`1`
+              &sortby=`RAND()`
+              &limit=`4`
+              &depth=`1`
+              &parents=`3,9,13`
+              &context=`web`
+              &tplWrapper=`@INLINE <div class="row">[[+output]]</div>`
+              &where=`{"template:=":3}`
+            ]]
+            <p class="lead text-center">
+                <a href="/">Посмотреть все водные экскурсии по Санкт-Петербургу &rarr;</a>
+            </p>
+        </div>
+        <div class="col-sm-4">
+            <div class="well">
+                <h3>[[*longtitle]]</h3>
+                [[*content]]
+            </div>
+        </div>
+    </div>
+</div>
+
+[[$footer?]]
+
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+<script src="/assets/js/bootstrap-image-gallery.min.js"></script>
+<script>$('[data-toggle="tooltip"]').tooltip();</script>
+
+[[$Счетчики]]
+
+</body>
+</html>

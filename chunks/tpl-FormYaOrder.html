@@ -1,0 +1,16 @@
+id: 17
+source: 1
+name: tpl_FormYaOrder
+description: ''
+category: 'Отправка заказа в ПС'
+properties: 'a:0:{}'
+
+-----
+
+<form action="https://money.yandex.ru/eshop.xml" method="post" id="GoForm"> 
+    <input type="hidden" name="shopId" value="30518"> 
+    <input type="hidden" name="scid" value="21984"> 
+    <input type="hidden" name="shopFailURL" value="http://nevatrip.ru/"> 
+    [[+inputs]]
+    <input type="submit" value="Отправить" class="btn btn-deafult btn-lg"/> 
+</form>

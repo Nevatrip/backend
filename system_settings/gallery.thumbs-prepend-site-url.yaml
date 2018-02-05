@@ -1,0 +1,3 @@
+key: gallery.thumbs_prepend_site_url
+xtype: combo-boolean
+namespace: gallery

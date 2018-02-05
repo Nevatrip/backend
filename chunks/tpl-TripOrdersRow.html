@@ -1,0 +1,49 @@
+id: 19
+source: 1
+name: tpl_TripOrdersRow
+description: ''
+category: 'Список заказов'
+properties: 'a:0:{}'
+
+-----
+
+<tr>
+  <td>[[+idx]]</td>
+  <td>[[+order_id]]</td>
+  <td>
+    <a href="mailto:[[+cps_email]]">[[+cps_email]]</a>
+    <br><b>[[+fullname]]</b>
+    <br><a href="tel:[[+cps_phone]]">[[+cps_phone]]</a>
+  </td>
+  <td>
+    <a href="[[+trip_link]]" class="pull-left" target="_blank" title="Открыть страницу экскурсии">[[+trip_name]]</a>
+    <a href="[[+trip_mgr]]" class="btn btn-warning btn-sm pull-right" target="_blank" title="Открыть страницу экскурсии в панели администратора">управление</a>
+  </td>
+  <td>
+    <button class="btn btn-link btn-block" title="[[+ticket_1_adult_c:notempty=`Взрослый: [[+ticket_1_adult_price]]&nbsp;руб.&nbsp;&times;&nbsp;[[+ticket_1_adult_c]]. `]][[+ticket_1_discount_c:notempty=`Льготный: [[+ticket_1_discount_price]]&nbsp;руб.&nbsp;&times;&nbsp;[[+ticket_1_discount_c]]. `]][[+ticket_1_child_c:notempty=`Детский: [[+ticket_1_child_price]]&nbsp;руб.&nbsp;&times;&nbsp;[[+ticket_1_child_c]]. `]][[+ticket_2_adult_c:notempty=`Взрослый_2: [[+ticket_2_adult_price]]&nbsp;руб.&nbsp;&times;&nbsp;[[+ticket_2_adult_c]]. `]][[+ticket_2_discount_c:notempty=`Льготный_2: [[+ticket_2_discount_price]]&nbsp;руб.&nbsp;&times;&nbsp;[[+ticket_2_discount_c]]. `]][[+ticket_2_child_c:notempty=`Детский_2: [[+ticket_2_child_price]]&nbsp;руб.&nbsp;&times;&nbsp;[[+ticket_2_child_c]]. `]]">
+      [[+sum]]&nbsp;руб.
+    </button>
+    <small>
+        [[+ticket_1_adult_c:gt=`0`:then=`Взрослый: [[+ticket_1_adult_price]]&nbsp;руб.&nbsp;&times;&nbsp;[[+ticket_1_adult_c]]<br>`:else=``]]
+        [[+ticket_1_discount_c:gt=`0`:then=`Льготный: [[+ticket_1_discount_price]]&nbsp;руб.&nbsp;&times;&nbsp;[[+ticket_1_discount_c]]<br>`:else=``]]
+        [[+ticket_1_child_c:gt=`0`:then=`Детский: [[+ticket_1_child_price]]&nbsp;руб.&nbsp;&times;&nbsp;[[+ticket_1_child_c]]<br>`:else=``]]
+        [[+ticket_2_adult_c:gt=`0`:then=`Взрослый_2: [[+ticket_2_adult_price]]&nbsp;руб.&nbsp;&times;&nbsp;[[+ticket_2_adult_c]]<br>`:else=``]]
+        [[+ticket_2_discount_c:gt=`0`:then=`Льготный_2: [[+ticket_2_discount_price]]&nbsp;руб.&nbsp;&times;&nbsp;[[+ticket_2_discount_c]]<br>`:else=``]]
+        [[+ticket_2_child_c:gt=`0`:then=`Детский_2: [[+ticket_2_child_price]]&nbsp;руб.&nbsp;&times;&nbsp;[[+ticket_2_child_c]]`:else=``]]
+    </small>
+  </td>
+  <td><abbr title="Статус заказа">[[+status]]</abbr></td>
+  <td>
+    [[+trip_date]] в [[+trip_time:isempty=`течение дня`]]<br>
+    [[+trip_points]]
+  </td>
+  <td><abbr title="Тип платежа">[[+paymentType]]</abbr></td>
+  <td><abbr title="Номер счёта">[[+invoiceId]]</abbr></td>
+  <td>
+    <abbr title="Дата создания">[[+created]]</abbr>
+    /
+    <abbr title="Дата изменения">[[+modified:isempty=`ещё не менялся`]]</abbr>
+  </td>
+  <td><abbr title="Код">[[+code]]</abbr></td>
+  <td><abbr title="Промокод">[[+promocode]]</abbr></td>
+</tr>

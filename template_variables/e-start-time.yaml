@@ -1,0 +1,14 @@
+id: 17
+source: 1
+type: text
+name: e_start_time
+caption: 'Время отправления'
+description: 'Наример, 11:00,13:00,14:15'
+category: '3. Покупка билетов'
+elements: ''
+display: delim
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:2:{s:10:"allowBlank";s:4:"true";s:7:"columns";s:1:"1";}'
+output_properties: 'a:1:{s:9:"delimiter";s:1:",";}'
+content: ''

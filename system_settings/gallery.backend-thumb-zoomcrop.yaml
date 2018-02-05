@@ -1,0 +1,5 @@
+key: gallery.backend_thumb_zoomcrop
+value: '1'
+xtype: combo-boolean
+namespace: gallery
+area: backend

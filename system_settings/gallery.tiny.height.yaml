@@ -1,0 +1,4 @@
+key: gallery.tiny.height
+value: '200'
+namespace: gallery
+area: TinyMCE

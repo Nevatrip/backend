@@ -1,3 +1,3 @@
 key: principal_targets
-value: 'modAccessContext,modAccessResourceGroup,modAccessCategory,sources.modAccessMediaSource,modAccessNamespace'
+value: 'modAccessContext,modAccessResourceGroup,modAccessCategory,sources.modAccessMediaSource'
 area: authentication

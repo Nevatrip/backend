@@ -3,4 +3,4 @@ key: allow_tags_in_post
 value: '1'
 xtype: combo-boolean
 area: system
-editedon: null
+editedon: '0000-00-00 00:00:00'

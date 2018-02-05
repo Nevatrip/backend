@@ -1,0 +1,18 @@
+id: 41
+source: 1
+name: БилетыТудаОбратно
+description: ''
+category: 'Покупка билетов'
+properties: 'a:0:{}'
+
+-----
+
+<div class="form-group" id="BuyFormBackForthTickets">
+    <label>Билеты туда-обратно</label>
+    
+    [[$Билет?title=`Взрослый` &name=`2_adult` &price=`[[+prices:modElement=`0`]]` &defaultCount=`0` &type=`adult` ]]
+
+    [[$Билет?title=`Льготный` &name=`2_discount` &price=`[[+prices:modElement=`1`]]` &defaultCount=`0` &type=`discount` &hint=`[[$ПодсказкаЛьготныйБилет]]`]]
+    
+    [[$Билет?title=`Детский` &name=`2_child` &price=`[[+prices:modElement=`2`]]` &defaultCount=`0` &type=`child` &hint=`[[$ПодсказкаДетскийБилет]]`]]
+</div>

@@ -1,0 +1,13 @@
+id: 41
+source: 1
+type: galleryalbumlist
+name: rent_boat_photos
+caption: Фотоальбом
+category: Аренда
+elements: ''
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:15:{s:10:"allowBlank";s:4:"true";s:4:"sort";s:4:"rank";s:3:"dir";s:4:"DESC";s:5:"limit";s:1:"0";s:5:"start";s:1:"0";s:8:"showNone";s:4:"true";s:9:"showCover";s:4:"true";s:6:"parent";s:0:"";s:9:"subchilds";s:6:"Нет";s:5:"width";s:3:"400";s:9:"listWidth";s:0:"";s:9:"typeAhead";s:5:"false";s:14:"typeAheadDelay";s:3:"250";s:14:"forceSelection";s:5:"false";s:13:"listEmptyText";s:0:"";}'
+output_properties: 'a:0:{}'
+content: ''

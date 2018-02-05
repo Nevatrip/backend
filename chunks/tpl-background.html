@@ -1,0 +1,12 @@
+id: 49
+name: tpl_background
+description: ''
+category: Gallery
+properties: null
+
+-----
+
+[[+linkToImage:if=`[[+linkToImage]]`:is=`1`:then=`[[+image_absolute]]`:else=`[[~[[*id]]?
+            &[[+imageGetParam]]=`[[+id]]`
+            &[[+albumRequestVar]]=`[[+album]]`
+            &[[+tagRequestVar]]=`[[+tag]]` ]]`]]

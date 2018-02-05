@@ -1,0 +1,187 @@
+id: 26
+source: 1
+name: tpl_email_SuccessPayment_client
+description: ''
+category: 'Письма о заказе'
+properties: 'a:0:{}'
+
+-----
+
+<table width="100%" cellpadding="0" cellspacing="0">
+  <tr>
+    <td align="center" valign="top">
+      <table width="622" cellpadding="0" cellspacing="0" style="border:1px solid #dadada;font-family:Arial,sans-serif">
+        <tr>
+          <td width="40" rowspan="4">&nbsp;</td>
+          <td height="28" colspan="2">&nbsp;</td>
+          <td width="40" rowspan="4">&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="left">
+            <a href="https://nevatrip.ru" style="text-decoration: none; display: block;" target="_blank">
+              <img src="https://nevatrip.ru/assets/img/nevatrip_logo_h.png" alt="NevaTrip" title="NevaTrip" width="188" height="40" style="display:block; border:0">
+            </a>
+          </td>
+          <td align="right" valign="middle">
+            <a href="https://nevatrip.ru/print?trip=[[+id]]&hash=[[+cps_email:lowercase:md5]]" target="_blank" style="text-decoration: none; color: #111111;">
+              <img src="https://nevatrip.ru/assets/img/tech/print.png" alt="Печать" style="vertical-align: middle; border: 0;">
+              Распечатать билет
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td height="32" colspan="2">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="2" style="color: #000000;">
+            <h1 style="font-size: 27px; font-weight: bold; margin-top: 0;">
+              Спасибо за покупку!
+            </h1>
+            <p style="font-size: 20px; margin-top: 4px; margin-bottom: 8px;">
+              Ваш посадочный билет: № <strong>НТ[[+code:contains=`,`:then=`[[+code]] (обратный)`:else=`[[+code]]`]]</strong>
+            </p>
+            [[#[[+trip_id]].tv.e_need_print_ticket:isnot=`1`:then=`
+            <p style="font-size: 13px; margin-top: 4px; margin-bottom: 4px;">
+              Билет распечатывать не обязательно, зарегистрируйтесь на рейс, сообщив № электронного билета кассиру, и получите посадочный билет.
+            </p>
+            <p style="font-size: 13px; margin-top: 4px; margin-bottom: 12px;">
+              Вам необходимо подойти <b>за 15-20 минут</b> до отправления рейса (в выходные для метеоров - заранее).
+            </p>
+            `:else=`
+            <p style="font-size: 13px; margin-top: 4px; margin-bottom: 12px;">
+              Вам необходимо подойти <b>за 15-20 минут</b> до отправления рейса и <b>предъявить РАСПЕЧАТАННЫЙ билет</b>. Без билета нет посадки.
+            </p>
+            `]]
+          </td>
+        </tr>
+
+        <tr>
+          <td width="40" rowspan="4" style="background: #ededed;">&nbsp;</td>
+          <td height="30" colspan="2" style="background: #ededed;">
+          <td width="40" rowspan="4" style="background: #ededed;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td align="left" valign="top" colspan="2" style="background: #ededed;">
+            <h3 style="color: #000000; font-size: 16px; font-weight: bold; margin-top: 0;">
+              <a href="[[~[[+trip_id]]?scheme=`full`]]" target="_blank">[[#[[+trip_id]].pagetitle]]</a>
+            </h3>
+          </td>
+        </tr>
+        <tr>
+          <td valign="top" style="background: #ededed;">
+            <table width="100%" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td style="color:#66571c; font-size: 11px;line-height: 22px;">
+                    ДАТА
+                  </td>
+                </tr>
+                <tr>
+                  <td style="color:#000000; font-size: 16px; font-weight: bold; line-height: 22px">
+                    [[+date_ago:is=``:then=`
+                        [[+trip_date]]
+                    `:else=`
+                        в ночь с [[+date_ago]] на [[+trip_date]]
+                    `]]
+                  </td>
+                </tr>
+                [[+trip_points:notempty=`
+                <tr>
+                  <td style="color: #66571c; font-size: 11px; line-height: 22px;">
+                    НАПРАВЛЕНИЕ
+                  </td>
+                </tr>
+                <tr>
+                  <td style="color: #000000; font-size: 16px; font-weight: bold; line-height: 22px">
+                    [[+trip_points]]
+                  </td>
+                </tr>
+                `]]
+                <tr>
+                  <td style="color: #66571c; font-size: 11px; line-height: 22px;">
+                    ВРЕМЯ
+                  </td>
+                </tr>
+                <tr>
+                  <td style="color: #000000; font-size: 16px; font-weight: bold; line-height: 22px">
+                    [[+trip_time_back:notempty=`туда в `]][[+trip_time:default=`в течение дня`]][[+trip_time_back:notempty=`, обратно в [[+trip_time_back]]`]]
+                  </td>
+                </tr>
+                <tr>
+                  <td style="color: #66571c; font-size: 11px; line-height: 22px;">
+                    Билеты
+                  </td>
+                </tr>
+                <tr>
+                  <td style="color: #000000; font-size: 16px; font-weight: bold; line-height: 22px">
+                    [[+ticket_1_adult_c:gt=`0`:then=`Взрослый &mdash; [[+ticket_1_adult_c]] шт.<br/>`:else=``]]
+                    [[+ticket_1_discount_c:gt=`0`:then=`Льготный &mdash; [[+ticket_1_discount_c]] шт.<br/>`:else=``]]
+                    [[+ticket_1_child_c:gt=`0`:then=`Детский &mdash; [[+ticket_1_child_c]] шт.<br/>`:else=``]]
+                    [[+ticket_2_adult_c:gt=`0`:then=`Взрослый на 2 дня &mdash; [[+ticket_2_adult_c]] шт.<br/>`:else=``]]
+                    [[+ticket_2_discount_c:gt=`0`:then=`Льготный на 2 дня &mdash; [[+ticket_2_discount_c]] шт.<br/>`:else=``]]
+                    [[+ticket_2_child_c:gt=`0`:then=`Детский на 2 дня &mdash; [[+ticket_2_child_c]] шт.<br/>`:else=``]]
+                  </td>
+                </tr>
+            </table>
+          </td>
+          <td valign="top" style="background: #ededed;">
+            <table width="100%" cellpadding="0" cellspacing="0">
+              <tr>
+                <td style="color: #66571c; font-size: 11px; line-height: 22px;">
+                  МЕСТО ОТПРАВЛЕНИЯ
+                </td>
+              </tr>
+              <tr>
+                <td style="color: #000000; font-size: 16px; font-weight: bold; line-height: 22px">
+                  [[+e_from:is=``:then=`
+                  [[#[[+trip_id]].tv.e_from:modWikiLink]]
+                  `:else=`
+                  <a href="[[+map_link]]" target="_blank">[[+e_from]]</a>
+                  `]]
+                </td>
+              </tr>
+              <tr>
+                <td style="color: #66571c; font-size: 11px; line-height: 22px;">
+                  КОНТАКТЫ
+                </td>
+              </tr>
+              <tr>
+                <td style="color: #000000; font-size: 16px; font-weight: bold; line-height: 22px">
+                  [[#[[+trip_id]].tv.e_from_contacts]]
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" height="10" style="background: #ededed;">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="4" align="center">
+            <img src="[[+from_photo]]" alt="Карта причала" style="width: 620px;">
+          </td>
+        </tr>
+        <tr>
+          <td width="40" rowspan="3">&nbsp;</td>
+          <td colspan="2" height="20"></td>
+          <td width="40" rowspan="3">&nbsp;</td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <h4 style="color: #000000; font-size: 15px; font-weight: bold; margin-top: 0; margin-bottom: 12px;">
+              Служба поддержки (с 10:00 до 01:00)
+            </h4>
+            <p style="color: #000000; font-size: 13px; margin-top: 4px; margin-bottom: 4px;">
+              +7 (812) 965-34-04
+            </p>
+            <p style="color: #222; font-size: 11px; margin-top: 4px; margin-bottom: 4px;">
+              Центр организации и продвижения событий &laquo;Про Событие&raquo;
+            </p>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" height="20"></td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>

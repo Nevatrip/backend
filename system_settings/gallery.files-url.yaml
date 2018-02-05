@@ -1,0 +1,4 @@
+key: gallery.files_url
+value: '[[++assets_url]]gallery/'
+namespace: gallery
+area: Paths

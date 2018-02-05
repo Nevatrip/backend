@@ -1,0 +1,11 @@
+id: 16
+source: 1
+name: tpl_FormHiddenInput
+description: ''
+category: 'Отправка заказа в ПС'
+properties: 'a:0:{}'
+
+-----
+
+<input type="hidden" name="[[+name]]" value='[[+value]]'>
+[[-<input type="hidden" name="[[+name]]" value="[[+value:stripString=`"`:esc]]">]]

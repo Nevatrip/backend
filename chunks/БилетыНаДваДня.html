@@ -1,0 +1,18 @@
+id: 14
+source: 1
+name: БилетыНаДваДня
+description: ''
+category: 'Покупка билетов'
+properties: 'a:0:{}'
+
+-----
+
+<div class="form-group">
+    <label>Билеты на два дня</label>
+    
+    [[$Билет?title=`Взрослый` &name=`2_adult` &price=`[[+prices:modElement=`0`]]` &defaultCount=`0` &type=`adult` ]]
+
+    [[$Билет?title=`Льготный` &name=`2_discount` &price=`[[+prices:modElement=`1`]]` &defaultCount=`0` &type=`discount` &hint=`[[$ПодсказкаЛьготныйБилет]]`]]
+    
+    [[$Билет?title=`Детский` &name=`2_child` &price=`[[+prices:modElement=`2`]]` &defaultCount=`0` &type=`child` &hint=`[[$ПодсказкаДетскийБилет]]`]]
+</div>

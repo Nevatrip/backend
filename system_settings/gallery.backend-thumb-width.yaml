@@ -1,0 +1,4 @@
+key: gallery.backend_thumb_width
+value: '100'
+namespace: gallery
+area: backend

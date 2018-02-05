@@ -1,4 +1,0 @@
-key: use_context_resource_table
-value: '1'
-xtype: combo-boolean
-area: caching

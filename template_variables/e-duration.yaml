@@ -1,0 +1,13 @@
+id: 4
+source: 1
+type: text
+name: e_duration
+caption: 'Длительность:'
+category: '4. Время'
+elements: ''
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:1:{s:10:"allowBlank";s:4:"true";}'
+output_properties: 'a:0:{}'
+content: ''

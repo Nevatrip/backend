@@ -1,0 +1,15 @@
+id: 34
+source: 1
+type: time
+name: time_range_start
+caption: 'Отправление из Санкт-Петербурга'
+description: 'Выберите диапазон времени, в течение которого можно использовать билет'
+category: '4. Время'
+elements: ''
+rank: 4
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:0:{}'
+output_properties: 'a:0:{}'
+content: ''

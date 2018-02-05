@@ -1,0 +1,14 @@
+id: 27
+source: 1
+type: textarea
+name: e_static_map
+caption: 'HTML код статической карты'
+description: 'https://tech.yandex.ru/maps/tools/constructor/'
+category: '3. Покупка билетов'
+elements: ''
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:1:{s:10:"allowBlank";s:4:"true";}'
+output_properties: 'a:0:{}'
+content: ''

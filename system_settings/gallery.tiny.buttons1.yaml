@@ -1,0 +1,4 @@
+key: gallery.tiny.buttons1
+value: 'undo,redo,selectall,pastetext,pasteword,charmap,separator,image,modxlink,unlink,media,separator,code,help'
+namespace: gallery
+area: TinyMCE

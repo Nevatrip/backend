@@ -1,0 +1,103 @@
+id: 14
+source: 1
+templatename: 'Аренда. Список'
+description: ''
+icon: icon-star
+properties: 'a:0:{}'
+
+-----
+
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/LocalBusiness">
+<head lang="ru">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>[[*longtitle:default=`[[*pagetitle]]`]]</title>
+<meta name="description" content="[[*description]]"/>
+
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="brand" content="[[*pagetitle]]"/>
+<meta itemprop="url" content="http://nevatrip.ru"/>
+<meta itemprop="image" content="http://nevatrip.ru/assets/img/nevatrip_logo_social.png">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="[[*pagetitle]]"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="http://nevatrip.ru/"/>
+<meta property="og:image" content="http://nevatrip.ru/assets/img/nevatrip_logo_social.png"/>
+<meta property="og:description" content="[[*description]]"/>
+
+<meta name="theme-color" content="#3799c9">
+<link rel="icon" type="image/png" href="/assets/img/favicon.png"/>
+
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css"/>
+<link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-datepicker3.min.css"/>
+</head>
+<body data-spy="scroll" data-target="#NavScrollSpy">
+  <div class="topbar" id="TopBar">
+    <div class="container">
+      <h1 class="topbar-brand" style="margin: 0;">
+        <!-- Водные экскурсии по рекам и каналам Петербурга, прогулки по Неве на теплоходе NevaTrip -->
+        <a href="[[~1]]">
+            <img src="/assets/img/nevatrip_logo_sm.png" alt="Nevatrip" itemprop="logo" class="visible-xs">
+            <img src="/assets/img/nevatrip_logo_md.png" alt="Nevatrip" itemprop="logo" class="hidden-xs">
+        </a>
+      </h1>
+      <div class="topbar-slogan hidden-xs">Лучшие водные экскурсии по Петербургу</div>
+      <div class="topbar-text text-right">
+        <a href="mailto:info@nevatrip.ru" target="_blank">info@nevatrip.ru</a>
+
+        <p class="lead"><a href="tel:88129653404">8 812 965-34-04</a></p>
+      </div>
+    </div>
+  </div>
+  <div class="navbar navbar-inverse" id="NavScrollSpy" data-spy="affix" data-offset-top="120">
+    <div class="container">
+      <div class="navbar-header">
+        <div class="navbar-header__title collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">Меню →</div>
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        [[$menu?]]
+      </div>
+    </div>
+  </div>
+
+  <div class="img-bg" style="background-image: url('/assets/img/e/[[*alias]]/bg.jpg');">
+    <div class="container">
+      <h2 class="alpha-bg">[[*pagetitle]]</h2>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+        [[*content:phphypher]]
+      </div>
+      <div class="col-md-4">
+        [[*list-rent:notempty=`
+          [[getImageList?
+            &tvname=`list-rent`
+            &tpl=`list-rent__item`
+          ]]
+        `]]
+      </div>
+    </div>
+  </div>
+
+  [[$footer?]]
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="/assets/js/bootstrap.min.js"></script>
+
+  [[$Счетчики]]
+
+</body>
+</html>

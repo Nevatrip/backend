@@ -1,0 +1,4 @@
+key: gallery.default_batch_upload_path
+value: '{assets_path}images/'
+namespace: gallery
+area: backend

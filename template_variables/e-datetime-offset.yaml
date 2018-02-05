@@ -1,0 +1,14 @@
+id: 31
+source: 1
+type: text
+name: e_datetime_offset
+caption: 'Ограничение по времени для покупки'
+description: 'Например, "18:00(0)" если нужно, чтобы в 18:00 прекратились продажи на текущий день. "10:00(1)" для случаев типа "в 10:00 7-го мая перестать продавать на 8-е мая"'
+category: '3. Покупка билетов'
+elements: ''
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:3:{s:10:"allowBlank";s:4:"true";s:9:"maxLength";s:0:"";s:9:"minLength";s:0:"";}'
+output_properties: 'a:0:{}'
+content: ''

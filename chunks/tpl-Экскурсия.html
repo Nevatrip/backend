@@ -1,0 +1,43 @@
+id: 2
+source: 1
+name: tpl_Экскурсия
+description: ''
+category: 'Контентные шаблоны'
+properties: 'a:0:{}'
+
+-----
+
+<div class="row">
+    <div class="col-sm-5">
+        <a href="/[[~[[+id]]]]">
+            <img src="/assets/img/e/[[#[[+parent]].alias]]/[[+alias]].jpg" srcset="/assets/img/e/[[#[[+parent]].alias]]/[[+alias]]_x2.jpg 2x" alt="[[+pagetitle:esc]]" class="img-responsive h3 img-rounded img-item"/>
+        </a>
+    </div>
+    
+    <div class="col-sm-6">
+    
+        <a href="/[[~[[+id]]]]" class="h3"><h3>[[+pagetitle]]</h3></a>
+        
+        <ul class="fa-ul">
+           [[+tv.e_points:modPoints=`tpl_ПростойПункт`]]
+        </ul>
+        
+        <div class="clearfix" style="margin-bottom: 14px;">
+            <div class="pull-left">
+                <span class="price">[[+tv.e_price]] <i class="fa fa-rub fa-xs"></i></span>
+                [[+tv.e_price_on_pier:notempty=`<small class="sub-price">[[+tv.e_price_on_pier]] <i class="fa fa-rub fa-xs"></i> на причале</small>`]]
+            </div>
+            &nbsp;
+            &nbsp;
+            [[-<a href="[[~18?scheme=`https`]]?id=[[+id]]" class="btn btn-warning btn-lg">Купить</a>]]
+            <a href="/[[~[[+id]]]]" class="btn btn-warning btn-lg">Подробнее  &rarr;</a>
+        </div>
+        
+        [[-<p>
+            <a href="/[[~[[+id]]]]">Подробнее об экскурсии &rarr;</a>
+        </p>]]
+        
+    </div>
+</div>
+
+<hr class="short"/>

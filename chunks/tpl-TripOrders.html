@@ -1,0 +1,122 @@
+id: 20
+source: 1
+name: tpl_TripOrders
+description: ''
+category: 'Список заказов'
+properties: 'a:0:{}'
+
+-----
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-6 col-md-7">
+      <form class="form-horizontal" action="" method="get">
+        <div class="form-group">
+          <label for="trip_id" class="col-sm-5 col-md-3 control-label">Показать</label>
+          <div class="col-sm-7 col-md-9">
+            [[pdoMenu?
+              &sortby=`menuindex`
+              &parents=`3, 9, 13`
+              &displayStart=`1`
+              &context=`web`
+              &plPrefix=``
+              &firstClass=``
+              &lastClass=``
+              &tplOuter=`@INLINE <select class="form-control" name="trip_id" id="trip_id"><option value="all">Все экскурсии</option>[[+wrapper]]</select>`
+              &tpl=`@INLINE <!-- tpl -->[[+wrapper]]<!-- /tpl -->`
+              &tplInner=`@INLINE [[+wrapper]]`
+              &tplInnerRow=`tpl_tripSelectorRow`
+              &tplStart=`@INLINE <optgroup label="[[+menutitle]]">[[+wrapper]]</optgroup>`
+            ]]
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="status_payment" class="col-sm-5 col-md-3 control-label">Статус оплаты</label>
+          <div class="col-sm-7 col-md-9">
+            <select class="form-control" name="status_payment" id="status_payment">
+              <option value="all" [[+status_payment:is=`all`:then=`selected`]]>любой</option>
+              <option value="paid" [[+status_payment:is=`paid`:then=`selected`]]>оплаченные</option>
+              <option value="unpaid" [[+status_payment:is=`unpaid`:then=`selected`]]>неоплаченные</option>
+              <option value="promo" [[+status_payment:is=`promo`:then=`selected`]]>промокод</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-12 col-md-4">
+            <select class="form-control" name="date_type">
+              <option value="created" [[+date_type:is=`created`:then=`selected`]]>созданные</option>
+              <option value="trip_date" [[+date_type:is=`trip_date`:then=`selected`]]>по дате поездки</option>
+            </select>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div id="date_from" class="input-group date"
+              data-date-format="dd.mm.yyyy"
+              data-date-start-date="01.01.2013"
+              data-today-highlight="true">
+              <span class="input-group-addon">c</span>
+              <input type="text" name="date_from" class="form-control" placeholder="дд.мм.гггг" required maxlength="10" value="[[+date.from]]">
+              <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4">
+            <div id="date_to" class="input-group date" 
+              data-date-format="dd.mm.yyyy"
+              data-date-start-date="02.01.2013">
+              <span class="input-group-addon">по</span>
+              <input type="text" name="date_to" class="form-control" placeholder="дд.мм.гггг" required maxlength="10" value="[[+date.to]]">
+              <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+            </div>
+          </div>
+        </div>
+        <button type="submit" class="btn btn-warning">Показать</button>
+      </form>
+    </div>
+    <div class="col-sm-6 col-md-5">
+      <dl class="dl-horizontal">
+        <dt>Найдено экскурсий:</dt>
+        <dd>[[+count]] за [[+timer]] сек.</dd>
+        <dt>Общая сумма:</dt>
+        <dd>[[+total_sum]]&nbsp;руб.</dd>
+        <dt>Всего билетов:</dt>
+        <dd>[[+total_tickets]]&nbsp;шт.</dd>
+        <dt>Взрослых билетов:</dt>
+        <dd>[[+total_tickets_1a]]&nbsp;шт.</dd>
+        <dt>Льготных билетов:</dt>
+        <dd>[[+total_tickets_1d]]&nbsp;шт.</dd>
+        <dt>Детских билетов:</dt>
+        <dd>[[+total_tickets_1c]]&nbsp;шт.</dd>
+        <dt>Взрослых билетов (2):</dt>
+        <dd>[[+total_tickets_2a]]&nbsp;шт.</dd>
+        <dt>Льготных билетов (2):</dt>
+        <dd>[[+total_tickets_2d]]&nbsp;шт.</dd>
+        <dt>Детских билетов (2):</dt>
+        <dd>[[+total_tickets_2c]]&nbsp;шт.</dd>
+      </dl>
+      <a href="[[~32? &scheme=`full`]]?format=csv&trip_id=[[+trip.id]]&status_payment=[[+status_payment]]&date_type=[[+date_type]]&date_from=[[+date.from]]&date_to=[[+date.to]]" class="btn btn-default btn-sm">скачать в формате *.csv</a>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="table-responsive">
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>№ заказа</th>
+        <th>Клиент</th>
+        <th>Экскурсия</th>
+        <th>Сумма</th>
+        <th>Статус</th>
+        <th>Время и место</th>
+        <th>Тип платежа</th>
+        <th>Номер счёта</th>
+        <th>Создан / изменён</th>
+        <th>Код</th>
+        <th>Промокод</th>
+      </tr>
+    </thead>
+    <tbody>
+      [[+output]]
+    </tbody>
+  </table>
+</div>

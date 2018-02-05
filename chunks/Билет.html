@@ -1,0 +1,33 @@
+id: 13
+source: 1
+name: Билет
+description: ''
+category: 'Покупка билетов'
+properties: 'a:0:{}'
+
+-----
+
+[[+price:isnot=``:and:isnot=`-`:then=`<div class="row">
+    <div class="col-sm-7">
+        <label class="h5">
+            <span class="text-primary">
+                [[+title]], 
+                <span class="buy-form-ticket-price" data-ticket-price="[[+price]]">[[+price]]</span> <i class="fa fa-rub"></i>
+            </span>
+            [[+hint]]
+        </label>
+    </div>
+    
+    <div class="col-sm-5">
+        <input type="hidden" name="tickets[ticket_[[+name]]][price]" value="[[+price]]" class="form-control text-center buy-form-ticket-input" 
+            data-ticket-price="[[+price]]">
+            
+        <div class="input-group">
+            <span class="input-group-addon buy-form-ticket-minus"><i class="fa fa-minus"></i></span>
+            <input type="text" name="tickets[ticket_[[+name]]][c]" value="[[+defaultCount]]" class="form-control text-center buy-form-ticket" 
+                data-ticket-price="[[+price]]" 
+                data-ticket-type="[[+type]]" style="z-index: 0;">
+            <span class="input-group-addon buy-form-ticket-plus"><i class="fa fa-plus"></i></span>
+        </div>
+    </div>
+</div>`]]

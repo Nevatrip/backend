@@ -1,0 +1,14 @@
+id: 45
+source: 1
+type: migx
+name: list-rent
+caption: 'Включить аренды'
+description: 'Выбранные аренды будут включены в список'
+category: Списки
+elements: ''
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:7:{s:7:"configs";s:9:"list-rent";s:8:"formtabs";s:0:"";s:7:"columns";s:0:"";s:7:"btntext";s:0:"";s:10:"previewurl";s:0:"";s:10:"jsonvarkey";s:0:"";s:19:"autoResourceFolders";s:5:"false";}'
+output_properties: 'a:0:{}'
+content: ''

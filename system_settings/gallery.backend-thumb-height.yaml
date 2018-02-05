@@ -1,0 +1,4 @@
+key: gallery.backend_thumb_height
+value: '80'
+namespace: gallery
+area: backend

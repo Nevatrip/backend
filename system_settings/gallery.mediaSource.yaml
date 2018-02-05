@@ -1,0 +1,4 @@
+key: gallery.mediaSource
+value: '1'
+xtype: modx-combo-source
+namespace: gallery

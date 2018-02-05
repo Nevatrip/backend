@@ -1,0 +1,4 @@
+key: gallery.tiny.buttons3
+value: 'styleselect,formatselect,separator,styleprops'
+namespace: gallery
+area: TinyMCE

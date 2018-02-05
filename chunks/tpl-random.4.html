@@ -1,0 +1,14 @@
+id: 43
+name: tpl_random.4
+description: 'Блок со случайной экскурсией, выводящийся на страницах ошибок (403 и 404)'
+category: 'Контентные шаблоны'
+properties: 'a:0:{}'
+
+-----
+
+<div class="col-sm-12">
+  <a href="/[[~[[+id]]]]" title="[[+pagetitle]]" class="thumbnail">
+    <img src="/assets/img/e/[[#[[+parent]].alias]]/[[+alias]].jpg" srcset="/assets/img/e/[[#[[+parent]].alias]]/[[+alias]]_x2.jpg 2x" alt="[[+pagetitle:esc]]" class="img-responsive img-rounded"/>
+    <p class="caption lead">[[+pagetitle]]</p>
+  </a>
+</div>

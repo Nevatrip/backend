@@ -1,0 +1,13 @@
+id: 44
+source: 1
+type: resourcelist
+name: list-rent__resource
+caption: Аренда
+category: Списки
+elements: ''
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:8:{s:10:"allowBlank";s:1:"1";s:8:"showNone";s:1:"0";s:7:"parents";s:0:"";s:5:"depth";s:2:"10";s:13:"includeParent";s:1:"1";s:19:"limitRelatedContext";s:1:"0";s:5:"where";s:19:"{"template:=":"11"}";s:5:"limit";s:1:"0";}'
+output_properties: 'a:0:{}'
+content: ''

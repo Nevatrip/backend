@@ -1,0 +1,14 @@
+id: 49
+type: text
+name: pier_departure_id
+caption: 'ID причала'
+description: 'ID причала отправления из метода getCruisesInfo()'
+category: NevaTravel
+elements: ''
+rank: 2
+display: default
+default_text: ''
+properties: 'a:0:{}'
+input_properties: 'a:3:{s:10:"allowBlank";s:4:"true";s:9:"maxLength";s:0:"";s:9:"minLength";s:0:"";}'
+output_properties: 'a:0:{}'
+content: ''

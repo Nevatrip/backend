@@ -1,0 +1,88 @@
+id: 52
+source: 1
+name: footer
+description: ''
+category: Технические
+properties: 'a:0:{}'
+
+-----
+
+[[-<footer class="footer">
+    <div class="container">
+        <p>
+            <small>&copy; 2014, ООО "Центр организации и продвижения событий "Про Событие"</small>
+            [[-<small>&copy; 2014, ООО "Про Событие", ИНН 7802873242, КПП 780201001, ОГРН 1147847350133. Санкт-Петербург, Манежный пер. 10</small>]]
+        </p>
+    </div>
+</footer>]]
+
+<footer class="footer navbar-inverse">
+  <div class="container">
+    <div class="row" style="font-size: 16px;line-height: 2;">
+      <div class="col-sm-12">
+        <br>
+        <p class="h3 text-center">А здесь ещё больше подборок с прогулками и экскурсиями:</p>
+        <br>
+      </div>
+      [[pdoMenu?
+        &fastMode=`1`
+        &level=`1`
+        &parents=`61`
+        &plPrefix=``
+        &firstClass=``
+        &lastClass=``
+        &scheme=`full`
+        &tplOuter=`@INLINE [[+wrapper]]`
+        &tpl=`@INLINE <div class="col-sm-4"><a href="[[+link]]" class="footer__link">[[+menutitle]]</a>[[+wrapper]]</div>`
+      ]]
+    </div>
+    <br><br>
+    <div class="row">
+      <div class="col-sm-5 text-left">
+        <div class="media">
+          <div class="media-left">
+            <img class="media-object" src="/assets/img/golden-light.png" width="64" alt="1-е место">
+          </div>
+          <div class="media-body">
+            <p>Лучшая компания 2014 года всероссийской программы «Ты&nbsp;— предприниматель» в&nbsp;Санкт-Петербурге</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 text-left">
+        <div class="media">
+          <div class="media-left">
+            <img class="media-object" src="/assets/img/golden-light.png" width="64" alt="1-е место">
+          </div>
+          <div class="media-body">
+            <p>1 место «Молодой предприниматель России 2015» в номинации «Сфера услуг»</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-3 footer__contacts text-right" style="margin-top: 0;">
+        <p itemprop="email"><a href="mailto:info@nevatrip.ru" class="footer__link" target="_blank">info@nevatrip.ru</a></p>
+        <p itemprop="telephone"><a href="tel:88129653404" class="footer__link">8 812 965-34-04</a></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__disclaimer">
+    <div class="container clearfix">
+      <div class="pull-right">
+        <i class="fa fa-2x fa-inverse text-s fa-expeditedssl" title="Secure SSL"></i>
+        <i class="fa fa-2x fa-inverse text-s fa-cc-mastercard" title="MasterCard"></i>
+        <i class="fa fa-2x fa-inverse text-s fa-cc-visa" title="Visa"></i>
+      </div>
+      <ul class="list-inline">
+        <li>&copy; 2014-2017 Санкт-Петербург, ул Малая Морская 11</li>
+        <li><a href="/#nevatrip" class="footer__link">О нас</a></li>
+        <li><a href="/[[~74]]" class="footer__link">Оферта</a></li>
+        <li><a href="/[[~75]]" class="footer__link">Сотрудничество</a></li>
+        <li><a href="//vk.com/neva.trip" class="footer__link" target="_blank" rel="nofollow"><i class="fa fa-fw fa-vk"></i> Мы в ВКонтакте</a></li>
+        <li><a href="//www.instagram.com/nevatrip.ru/" class="footer__link" target="_blank" rel="nofollow"><i class="fa fa-fw fa-instagram"></i> Instagram</a></li>
+        <li><a href="//moskvatrip.ru" class="footer__link">Прогулки в Москве</a></li>
+      </ul>
+      <ol class="breadcrumb">
+      </ol>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,109 @@
+id: 6
+source: 1
+templatename: 'Группа экскурсий'
+description: ''
+properties: 'a:0:{}'
+
+-----
+
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/LocalBusiness">
+<head lang="ru">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>[[*longtitle:default=`[[*pagetitle]]`]]</title>
+    <meta name="description" content="[[*description]]"/>
+
+    <!-- Schema.org markup for Google+ -->
+    <meta itemprop="brand" content="[[*pagetitle]]"/>
+    <meta itemprop="url" content="https://nevatrip.ru/[[*uri]]"/>
+    <meta itemprop="image" content="https://nevatrip.ru/assets/img/e/[[#[[*parent]].alias]]/[[*alias]].jpg">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="[[*pagetitle]]"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://nevatrip.ru/[[*uri]]"/>
+    <meta property="og:image" content="https://nevatrip.ru/assets/img/e/[[#[[*parent]].alias]]/[[*alias]].jpg"/>
+    <meta property="og:description" content="[[*description]]"/>
+
+    <meta name="theme-color" content="#3799c9">
+    <link rel="icon" type="image/png" href="/assets/img/favicon.png"/>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap.css"/>
+    <link rel="stylesheet" type="text/css" href="/assets/css/bootstrap-datepicker3.min.css"/>
+    <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-127256-47TM8';</script>
+</head>
+<body data-spy="scroll" data-target="#NavScrollSpy">
+<div class="topbar" id="TopBar">
+    <div class="container">
+        <div class="topbar-brand" style="margin: 0;">
+            <!-- Водные экскурсии по рекам и каналам Петербурга, прогулки по Неве на теплоходе NevaTrip -->
+            <a href="[[~1]]">
+                <img src="/assets/img/nevatrip_logo_sm.png" alt="Nevatrip" itemprop="logo" class="visible-xs">
+                <img src="/assets/img/nevatrip_logo_md.png" alt="Nevatrip" itemprop="logo" class="hidden-xs">
+            </a>
+        </div>
+        <div class="topbar-slogan hidden-xs">Лучшие водные экскурсии по Петербургу</div>
+        <div class="topbar-text text-right">
+            <a href="mailto:info@nevatrip.ru" target="_blank">info@nevatrip.ru</a>
+
+            <p class="lead"><a href="tel:88129653404">8 812 965-34-04</a></p>
+        </div>
+    </div>
+</div>
+<div class="navbar navbar-inverse" id="NavScrollSpy" data-spy="affix" data-offset-top="120">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="/" class="navbar-header__title">← назад ко всем экскурсиям</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            [[$menu]]
+        </div>
+    </div>
+</div>
+
+<div class="img-bg" style="background-image: url('/assets/img/e/[[*alias]]/bg.jpg');">
+    <div class="container">
+        <h1 class="alpha-bg">[[*pagetitle]]</h1>
+    </div>
+</div>
+<div class="container">
+    [[getResources? &parents=`[[*id]]` &tpl=`tpl_Экскурсия` &depth=`0` &limit=`0` &includeTVs=`1` &processTVs=`1` &sortby=`{"menuindex":"ASC","id":"ASC"}` ]]
+</div>
+
+<div class="divider"></div>
+<div class="container">
+    [[pdoNeighbors?
+      &showHidden=`0`
+      &parents=`[[*parent]]`
+      &scheme=`full`
+      &showHidden=`1`
+      &resources=`1,3,9,13`
+      &tplPrev=`@INLINE <strong class="col-xs-6 link-prev text-left"><a href="[[+link]]">&larr;&nbsp;[[+menutitle]]</a></strong>`
+      &tplUp=`@INLINE <span class="link-up">&uarr; <a href="[[+link]]">[[+menutitle]]</a></span>`
+      &tplNext=`@INLINE <strong class="col-xs-6 link-next text-right"><a href="[[+link]]">[[+menutitle]]&nbsp;&rarr;</a></strong>`
+      &tplWrapper=`@INLINE <div class="row neighbors">[[+prev]][[+next]]</div>`
+    ]]
+</div>
+<div class="divider"></div>
+<div class="container">
+    [[*content]]
+</div>
+
+[[$footer?]]
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+
+[[$Счетчики]]
+
+</body>
+</html>

@@ -1,0 +1,309 @@
+id: 3
+source: 1
+templatename: Экскурсия
+description: ''
+properties: 'a:0:{}'
+
+-----
+
+<!DOCTYPE html>
+<html itemscope itemtype="http://schema.org/LocalBusiness">
+<head lang="ru">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <base href="/"/>
+
+    <title>[[*longtitle:default=`[[*pagetitle]]`]]</title>
+    <meta name="description" content="[[*description]]"/>
+
+  <!-- Schema.org markup for Google+ -->
+    <meta itemprop="brand" content="[[*pagetitle]]"/>
+    <meta itemprop="url" content="https://nevatrip.ru/[[*uri]]"/>
+    <meta itemprop="image" content="https://nevatrip.ru/assets/img/e/[[#[[*parent]].alias]]/[[*alias]].jpg">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="[[*pagetitle]]"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://nevatrip.ru/[[*uri]]"/>
+    <meta property="og:image" content="https://nevatrip.ru/assets/img/e/[[#[[*parent]].alias]]/[[*alias]].jpg"/>
+    <meta property="og:description" content="[[*description:htmlentities]]"/>
+
+    <meta name="theme-color" content="#3799c9">
+    <link rel="icon" type="image/png" href="assets/img/favicon.png"/>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/flag-icon.min.css"/>
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.css"/>
+    <link rel="stylesheet" href="//blueimp.github.io/Gallery/css/blueimp-gallery.min.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-image-gallery.min.css">
+    <script type="text/javascript">(window.Image ? (new Image()) : document.createElement('img')).src = 'https://vk.com/rtrg?p=VK-RTRG-127256-47TM8';</script>
+</head>
+<body>
+<div class="topbar" id="TopBar">
+    <div class="container">
+        <div class="topbar-brand">
+            <a href="[[~1]]">
+                <img src="/assets/img/nevatrip_logo_sm.png" alt="Nevatrip" itemprop="logo" class="visible-xs">
+                <img src="/assets/img/nevatrip_logo_md.png" alt="Nevatrip" itemprop="logo" class="hidden-xs">
+            </a>
+        </div>
+        <div class="topbar-slogan hidden-xs">Лучшие водные экскурсии по Петербургу</div>
+        <div class="topbar-text text-right">
+            <a href="mailto:info@nevatrip.ru" target="_blank">info@nevatrip.ru</a>
+
+            <p class="lead"><a href="tel:88129653404">8 812 965-34-04</a></p>
+        </div>
+    </div>
+</div>
+<div class="navbar navbar-inverse" id="NavScrollSpy">
+    <div class="container">
+        <div class="navbar-header">
+            <a href="[[~[[*parent]]]]" class="navbar-header__title">← [[#[[*parent]].menutitle:default=`[[#[[*parent]].pagetitle]]`]]</a>
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            [[$menu?]]
+        </div>
+    </div>
+</div>
+
+<div class="jumbotron img-bg" style="background-image: url('assets/img/e/[[#[[*parent]].alias]]/[[*alias]]_bg.jpg');">
+    <p>&nbsp;</p>
+    <div class="container">
+        <div class="alpha-bg">
+            <h1>[[*pagetitle]]</h1>
+        </div>
+    </div>
+    <p>&nbsp;</p>
+</div>
+<!-- time_range [[*time_range?]] -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            <ul class="fa-ul">
+                [[*e_duration:isnot=``:then=`
+                <li>
+                    <i class="fa-li fa fa-circle text-warning"></i>
+                    &nbsp;
+                    <span class="lead">
+                        <b>Длительность:</b> [[*e_duration]]
+                    </span>
+                </li>
+                `]]
+                [[*e_time:isnot=``:then=`
+                <li>
+                    <i class="fa-li fa fa-circle text-warning"></i>
+                    &nbsp;
+                    <span class="lead">
+                        <b>Расписание:</b> [[*e_time]]
+                    </span>
+                </li>
+                `]]
+                [[*e_from:isnot=``:then=`
+                <li>
+                    <i class="fa-li fa fa-circle text-warning"></i>
+                    &nbsp;
+                    <span class="lead">
+                        <b>Отправление:</b> [[*e_from:modWikiLink]]
+                    </span>
+                </li>
+                `]]
+                [[*e_boat:isnot=``:then=`
+                <li>
+                    <i class="fa-li fa fa-circle text-warning"></i>
+                    &nbsp;
+                    <span class="lead">
+                        <b>Теплоход:</b> [[*e_boat]]
+                    </span>
+                </li>
+                `]]
+                [[*e_excursion:isnot=``:then=`
+                <li>
+                    <i class="fa-li fa fa-circle text-warning"></i>
+                    &nbsp;
+                    <span class="lead">
+                        <b>Язык экскурсии:</b> [[*e_excursion:modPoints=`tpl_Флаг`]]
+                    </span>
+                </li>
+                `]]
+                [[*e_on_boat:isnot=``:then=`
+                <li>
+                    <i class="fa-li fa fa-circle text-warning"></i>
+                    &nbsp;
+                    <span class="lead">
+                        <b>На борту:</b> <small>[[*e_on_boat:modPoints=`tpl_НаБорту`]]</small>
+                    </span>
+                </li>
+                <li>
+                    <i class="fa-li fa fa-circle text-warning"></i>
+                    &nbsp;
+                    <span class="lead">
+                        <b><a href="[[~[[*id]]]]#route">Посмотреть маршрут прогулки</a></b>
+                    </span>
+                </li>
+                `]]
+            </ul>
+        </div>
+        <div class="col-sm-4">
+            <ul class="fa-ul">
+                [[*e_price_info:isnot=``:then=`
+                <li>
+                    <i class="fa-li fa fa-circle text-warning"></i>
+                    &nbsp;
+                    <span class="lead">
+                        <b>Стоимость:</b> [[*e_price_info]]
+                    </span>
+                </li>
+                `]]
+                [[*e_discount:isnot=``:then=`
+                <li>
+                    <i class="fa-li fa fa-circle text-warning"></i>
+                    &nbsp;
+                    <span class="lead">
+                        <b>Скидки:</b> [[*e_discount]]
+                    </span>
+                </li>
+                `]]
+            </ul>
+            
+            <div style="margin-top: 20px;margin-bottom: 34px;">
+                <div class="pull-left">
+                    <span class="price">[[*e_price]] <i class="fa fa-rub fa-xs"></i></span>
+                    [[*e_price_on_pier:notempty=`<small class="sub-price">[[*e_price_on_pier]] <i class="fa fa-rub fa-xs"></i> на причале</small>`]]
+                </div>
+                &nbsp;&nbsp;
+                <a href="[[~18?scheme=`https`]]?id=[[*id]]" class="btn btn-warning btn-lg"style="font-size: 20px"style="font-size: 20px">Выбрать дату</a>
+            </div>
+        </div>
+    </div>
+    
+	<hr/>
+	
+	<div class="row">
+		<div class="col-sm-4 col-sm-push-8">
+		    <h3 class="h4">Галерея</h3>
+		    <div id="links">
+    		    <div class="row">
+    		    [[Gallery? &album=`[[*e_photos]]` 
+        		    &thumbTpl=`tpl_Gallery_thumb`
+        		    &thumbWidth=`150` &thumbHeight=`150`
+        		    &imageWidth=`940` &imageHeight=`940`]]
+    		    </div>
+		    </div>
+		    
+			<h3 class="h4">Вы увидите:</h3>
+			<ul class="fa-ul">
+			    [[*e_showplaces:modPoints=`tpl_ПростойПункт`]]
+			</ul>
+			
+			[[*e_text_before_final_price:isnot=``:then=`
+			<div class="divider"></div>
+			<h3 class="h4">[[*e_text_before_final_price]]</h3>
+			<div style="margin-top: 10px;margin-bottom: 20px;">
+                <div class="pull-left">
+                    <span class="price">[[*e_price]] <i class="fa fa-rub fa-xs"></i></span>
+                </div>
+                &nbsp;&nbsp;
+                <a href="[[~18?scheme=`https`]]?id=[[*id]]" class="btn btn-warning btn-lg">Купить</a>
+            </div>
+            `]]
+            
+            <hr>
+            <p class="lead hidden-xs">Другие наши экскурсии:</p>
+            [[!pdoResources?
+              &tpl=`tpl_random.4`
+              &fastMode=`1`
+              &sortby=`RAND()`
+              &limit=`4`
+              &depth=`1`
+              &showHidden=`1`
+              &parents=`3,9,13`
+              &resources=`-[[*id]]`
+              &context=`web`
+              &tplWrapper=`@INLINE <div class="row hidden-xs">[[+output]]</div>`
+              &where=`{"template:=":3}`
+            ]]
+            
+		</div>
+		<div class="col-sm-8 col-sm-pull-4">
+		    <h3 class="h4">Об экскурсии</h3>
+			<div class="lead">[[*content]]</div>
+			
+			[[*e_map:isnot=``:then=`
+			<hr class="short"/ id="route">
+			<h3 class="h4">Карта маршрута</h3>
+			[[*e_map:replace=`width=600==width=auto`]]
+			<div class="divider"></div>
+			`]]
+			
+			[[*e_advice:notempty=`
+			<div class="well">
+			    <h3 class="h4">Совет от организатора</h3>
+			    <div class="lead">[[*e_advice]]</div>
+			</div>
+			`]]
+			
+			[[$VK_Comments]]
+		</div>
+	</div>
+</div>
+
+<hr/>
+
+<p class="lead text-center">
+    <a href="/">Посмотреть все водные экскурсии по Санкт-Петербургу &rarr;</a>
+</p>
+
+[[$footer?]]
+
+<!-- The Bootstrap Image Gallery lightbox, should be a child element of the document body -->
+<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls" data-use-bootstrap-modal="false">
+    <!-- The container for the modal slides -->
+    <div class="slides"></div>
+    <!-- Controls for the borderless lightbox -->
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="close">×</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+    <!-- The modal dialog, which will be used to wrap the lightbox content -->
+    <div class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" aria-hidden="true">&times;</button>
+                    <h4 class="modal-title"></h4>
+                </div>
+                <div class="modal-body next"></div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default pull-left prev">
+                        <i class="glyphicon glyphicon-chevron-left"></i>
+                        Previous
+                    </button>
+                    <button type="button" class="btn btn-primary next">
+                        Next
+                        <i class="glyphicon glyphicon-chevron-right"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="/assets/js/bootstrap.min.js"></script>
+<script src="//blueimp.github.io/Gallery/js/jquery.blueimp-gallery.min.js"></script>
+<script src="/assets/js/bootstrap-image-gallery.min.js"></script>
+<script>$('[data-toggle="tooltip"]').tooltip();</script>
+
+[[$Счетчики]]
+</body>
+</html>

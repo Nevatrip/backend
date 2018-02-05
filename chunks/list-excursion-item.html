@@ -1,0 +1,30 @@
+id: 50
+name: list-excursion__item
+description: ''
+category: Списки
+properties: 'a:0:{}'
+
+-----
+
+<div class="row" style="margin-top: 15px; margin-bottom: 15px;">
+  <div class="col-sm-5">
+    <a href="/[[#[[+list-excursion__resource]].uri]]">
+      <img src="/assets/img/e/[[#[[#[[+list-excursion__resource]].parent]].alias]]/[[#[[+list-excursion__resource]].alias]].jpg" alt="[[#[[+list-excursion__resource]].pagetitle]]" class="img-responsive img-rounded img-item">
+    </a>
+  </div>
+  <div class="col-sm-6">
+    <h3 class="h3"><a href="/[[#[[+list-excursion__resource]].uri]]">[[#[[+list-excursion__resource]].pagetitle]]</a></h3>
+    <ul class="fa-ul">
+      [[#[[+list-excursion__resource]].e_points:modPoints=`tpl_ПростойПункт`]]
+    </ul>
+    <div class="clearfix" style="margin-bottom: 14px;">
+        <div class="pull-left">
+            <span class="price">[[#[[+list-excursion__resource]].e_price]] <i class="fa fa-rub fa-xs"></i></span>
+            [[#[[+list-excursion__resource]].e_price_on_pier:notempty=`<small class="sub-price">[[#[[+list-excursion__resource]].e_price_on_pier]] <i class="fa fa-rub fa-xs"></i> на причале</small>`]]
+        </div>
+        &nbsp;
+        &nbsp;
+        <a href="/[[#[[+list-excursion__resource]].uri]]" class="btn btn-warning btn-lg">Подробнее  &rarr;</a>
+    </div>
+  </div>
+</div>
